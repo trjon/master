@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_AassignStatic">
+    <AssignVariable>
+        <Name>api.request.verb</Name>
+        <Ref>message.verb</Ref>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>api.request.content</Name>
+        <Ref>message.content</Ref>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>api.ep.getCart.Zoom</Name>
+        <Value>lineitems:element:line:linetype,accessoriestotal,eipeligible,lineitems:element,lineitems:element:item:appliedpromotions,lineitems:element:item:appliedpromotions:element,lineitems:element:item:appliedpromotions:item,lineitems:element:productdefinitions,lineitems:element:availability,lineitems:element:pricetypes,lineitems:element:item:code,lineitems:element:item:priceoptions,lineitems:element:item:definition,lineitems:element:item:monthlyprice,lineitems:element:item:paynowprice,lineitems:element:item:price,lineitems:element:item:priceoptions,lineitems:element:line:device,lineitems:element:line:device:selected,lineitems:element:line:device:selected:appliedpromotions,lineitems:element:line:device:selected:appliedpromotions:element,lineitems:element:line:device:selected:item:extavailabilities,lineitems:element:line:device:selected:item:appliedpromotions:element,lineitems:element:line:device:selected:item:code,lineitems:element:line:device:selected:item:definition,lineitems:element:line:device:selected:item:definition:options,lineitems:element:line:device:selected:item:monthlyprice,lineitems:element:line:device:selected:item:priceoptions,lineitems:element:line:device:selected:monthlyprice,lineitems:element:line:device:selected:paynowprice,lineitems:element:line:device:selected:price,lineitems:element:line:device:selected:priceoptions,lineitems:element:line:device:selected:pricetypes,lineitems:element:line:device:selected:pricingoptions,lineitems:element:line:device:selected:productdefinitions,lineitems:element:line:linetype,lineitems:element:line:monthlyprice,lineitems:element:line:paynowprice,lineitems:element:line:plan:selected,lineitems:element:line:plan:selected:item:code,lineitems:element:line:plan:selected:item:definition,lineitems:element:line:plan:selected:item:price,lineitems:element:line:plan:selected:item:priceoptions,lineitems:element:line:plan:selected:monthlyprice,lineitems:element:line:plan:selected:paynowprice,lineitems:element:line:plan:selected:priceoptions,lineitems:element:line:plan:selected:pricetypes,lineitems:element:line:plan:selected:productdefinitions,lineitems:element:line:priceoptions,lineitems:element:line:refundable-deposit,lineitems:element:line:renamelineform,lineitems:element:line:service:selected,lineitems:element:line:service:selected:item:code,lineitems:element:line:service:selected:item:definition,lineitems:element:line:service:selected:item:priceoptions,lineitems:element:line:service:selected:monthlyprice,lineitems:element:line:service:selected:paynowprice,lineitems:element:line:service:selected:priceoptions,lineitems:element:line:service:selected:pricetypes,lineitems:element:line:simcards:selected:item:appliedpromotions:element,lineitems:element:line:simcards:selected:item:availability,lineitems:element:line:simcards:selected:item:code,lineitems:element:line:simcards:selected:item:definition,lineitems:element:line:simcards:selected:item:paynowprice,lineitems:element:line:simcards:selected:item:price,lineitems:element:line:simcards:selected:item:priceoptions,lineitems:element:line:simcards:selected:item:total,lineitems:element:line:simcards:selected:monthlyprice,lineitems:element:line:simcards:selected:paynowprice,lineitems:element:line:simcards:selected:priceoptions,lineitems:element:line:simcards:selected:pricetypes,lineitems:element:line:totals,lineitems:element:monthlyprice,lineitems:element:paynowprice,lineitems:element:price,lineitems:element:priceoptions,lineitems:element:pricingoptions,lineitems:element:total,monthlyprice,order:billingaddressinfo:billingaddress,order:e911addressinfo:e911address,order:billingaddressinfo:selector:chosen:description,order:e911addressinfo:selector:chosen:description,order:couponinfo,order:couponinfo:coupon,order:couponinfo:coupon:appliedpromotions,order:couponinfo:coupon:appliedpromotions:element,order:creditcardinfo:creditcardform,order:deliveries:element:destinationinfo:destination,order:deliveries:element:destinationinfo:selector:chosen:description,order:deliveries:element:shippingoptioninfo:selector:choice:description,order:deliveries:element:shippingoptioninfo:selector:choice:selectaction,order:deliveries:element:shippingoptioninfo:selector:chosen:description,order:deliveries:element:shippingoptioninfo:shippingoption,order:deliveries:element:shippingoptioninfo:shippingoption:appliedpromotions:element,order:monthlyprice,order:paynowprice,order:tax,paynowprice,priceoptions,refundable-deposit,total,lineitems:element:line:service:selected:item:price,lineitems:element:monthlyprice,lineitems:element:line:device:selected:item:eippriceavailabilities,lineitems:element:line:device:selected:item:eippriceavailabilities:item-eip-price-available,lineitems:element:item:eippriceavailabilities,lineitems:element:item:eippriceavailabilities:item-eip-price-available,lineitems:element:line:monthlydiscounts,monthlydiscounts</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>api.ep.getCart.Zoom.1</Name>
+        <Value>lineitems:element:line:device:selected:item:code,lineitems:element,lineitems:element:total,lineitems:element:appliedpromotions,lineitems:element:appliedpromotions:element,lineitems:element:appliedpromotions:item,lineitems:element:availability,lineitems:element:item:code,lineitems:element:item:definition,lineitems:element:item:monthlyprice,lineitems:element:item:paynowprice,lineitems:element:item:price,lineitems:element:line:device,lineitems:element:line:device:selected,lineitems:element:line:device:selected:appliedpromotions,lineitems:element:line:device:selected:appliedpromotions:element,lineitems:element:line:device:selected:appliedpromotions:element:item,lineitems:element:line:device:selected:item:extavailabilities,lineitems:element:line:device:selected:item:definition,lineitems:element:line:device:selected:monthlyprice,lineitems:element:line:device:selected:paynowprice,lineitems:element:line:device:selected:price,lineitems:element:line:monthlyprice,lineitems:element:line:paynowprice,lineitems:element:line:plan:selected,lineitems:element:line:plan:selected:item:code,lineitems:element:line:plan:selected:item:definition,lineitems:element:line:plan:selected:monthlyprice,lineitems:element:line:plan:selected:paynowprice,lineitems:element:line:refundable-deposit,lineitems:element:line:renamelineform,lineitems:element:line:service:selected,lineitems:element:line:service:selected:item:definition,lineitems:element:line:service:selected:monthlyprice,lineitems:element:line:service:selected:paynowprice,lineitems:element:monthlyprice,lineitems:element:paynowprice,lineitems:element:price,lineitems:element:total,monthlyprice,order:paynowprice,order:tax,order:monthlyprice,order:couponinfo,order:couponinfo:coupon,order:couponinfo:coupon:appliedpromotions,order:couponinfo:coupon:appliedpromotions:element,paynowprice,refundable-deposit,total</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>api.ep.getServices.Zoom</Name>
+        <Value>item:availability,item:definition,item:code,item:monthlyprice,item:paynowprice,item:price,item:itemconfiguration,constituentselectorform</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>environment</Name>
+        <Ref>environment.name</Ref>
+        <Value/>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>organization</Name>
+        <Ref>organization.name</Ref>
+        <Value/>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>api.request.creditLevel</Name>
+        <Ref>request.queryparam.creditLevel</Ref>
+        <Value/>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

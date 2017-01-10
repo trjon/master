@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="Callout.GetProfileAddresses">
+    <DisplayName>Callout.GetProfileAddresses</DisplayName>
+    <Properties/>
+    <Request clearPayload="false" variable="serviceCalloutGetProfileAddressesResponse">
+        <Set>
+            <Headers>
+                <Header name="Content-Type">application/json</Header>
+                <Header name="Authorization">{request.header.Authorization}</Header>
+                <Header name="Access-Control-Allow-Origin">*</Header>
+                <Header name="Access-Control-Allow-Headers">DNT,origin, access-control-allow-origin, X-Requested-With, Content-Type, Accept, Authorization, JSNLog-RequestId, senderId, sessionId, scope,  token,  referer,x-ep-user-scopes,x-ep-credit-level,x-ep-user-traits,x-ep-user-roles,x-forwarded-base,x-ep-user-id,cache-control</Header>
+                <Header name="Access-Control-Expose-Headers">location</Header>
+                <Header name="Allow">GET, POST</Header>
+            </Headers>
+            <Verb>GET</Verb>
+            <QueryParams>
+                <QueryParam name="zoom">addresses:element,emails:element</QueryParam>
+            </QueryParams>
+        </Set>
+    </Request>
+    <HTTPTargetConnection>
+        <Properties/>
+        <LoadBalancer>
+            <Server name="TMNG_ElasticPath_CortexTarget">
+                <IsEnabled>true</IsEnabled>
+            </Server>
+        </LoadBalancer>
+        <Path>/cortex/profiles/raptor/{profileId}</Path>
+    </HTTPTargetConnection>
+    <Response>raptorGetProfileAddressesResponse</Response>
+</ServiceCallout>

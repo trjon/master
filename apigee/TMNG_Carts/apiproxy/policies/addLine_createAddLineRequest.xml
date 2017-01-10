@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="addLine_createAddLineRequest">
+    <DisplayName>addLine_createAddLineRequest</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://addLine_createAddLineRequest.js</ResourceURL>
+</Javascript>

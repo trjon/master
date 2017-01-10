@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="updateAccessory_CalloutAddAccessory">
+    <Request variable="cortexRequest">
+        <Set>
+            <Headers>
+                <Header name="Content-Type">application/json</Header>
+                <Header name="X-ep-credit-level">GOOD</Header>
+                <Header name="Authorization">{request.header.Authorization}</Header>
+            </Headers>
+            <QueryParams>
+                <QueryParam name="followLocation"/>
+            </QueryParams>
+            <Path>{api.cortexTarget.path}</Path>
+            <Verb>PUT</Verb>
+            <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+                {"quantity":"@ep.request.quantity#", "pricing-option":"@ep.request.pricingOption#"}</Payload>
+        </Set>
+    </Request>
+    <HTTPTargetConnection>
+        <Properties>
+            <Property name="target.copy.pathsuffix">false</Property>
+            <Property name="target.copy.queryparams">false</Property>
+            <Property name="keepalive.timeout.millis">360000</Property>
+            <Property name="connect.timeout.millis">3600</Property>
+        </Properties>
+        <LoadBalancer>
+            <Server name="TMNG_ElasticPath_CortexTarget">
+                <IsEnabled>true</IsEnabled>
+            </Server>
+        </LoadBalancer>
+    </HTTPTargetConnection>
+    <Response>ep.response</Response>
+</ServiceCallout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ExtractCreateAuditRecord_Request">
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <Variable name="ep.request.sku">
+            <JSONPath>$.sku</JSONPath>
+        </Variable>
+        <Variable name="ep.request.audit-key">
+            <JSONPath>$.audit-records.audit-key</JSONPath>
+        </Variable>
+        <Variable name="ep.request.audit-value">
+            <JSONPath>$.audit-records.audit-value</JSONPath>
+        </Variable>
+        <Variable name="ep.request.audit-time">
+            <JSONPath>$.audit-records.audit-time</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">request</Source>
+</ExtractVariables>

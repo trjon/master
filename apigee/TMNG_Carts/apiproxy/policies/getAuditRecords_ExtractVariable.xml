@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="getAuditRecords_ExtractVariable">
+    <DisplayName>getAuditRecords_ExtractVariable</DisplayName>
+    <Source>request</Source>
+    <URIPath name="cartID">
+        <Pattern ignoreCase="true">/{cartID}/audit-records</Pattern>
+    </URIPath>
+    <QueryParam name="audit-keys">
+        <Pattern ignoreCase="true">{getAuditRecords.audit-keys}</Pattern>
+    </QueryParam>
+</ExtractVariables>

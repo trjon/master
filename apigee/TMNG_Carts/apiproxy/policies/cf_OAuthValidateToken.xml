@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 async="false" continueOnError="false" enabled="true" name="cf_OAuthValidateToken">
+    <Properties/>
+    <Attributes/>
+    <Operation>VerifyAccessToken</Operation>
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <GenerateResponse enabled="true">
+        <Format>FORM_PARAM</Format>
+    </GenerateResponse>
+    <SupportedGrantTypes/>
+    <GenerateResponse enabled="true"/>
+    <Tokens/>
+</OAuthV2>

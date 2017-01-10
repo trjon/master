@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JSONThreatProtection async="false" continueOnError="false" enabled="true" name="cf_JSONThreatProtection-">
+    <DisplayName>cf_JSONThreatProtection-</DisplayName>
+    <Properties/>
+    <ArrayElementCount>50</ArrayElementCount>
+    <ContainerDepth>10</ContainerDepth>
+    <ObjectEntryCount>80</ObjectEntryCount>
+    <ObjectEntryNameLength>150</ObjectEntryNameLength>
+    <Source>request</Source>
+    <StringValueLength>-1</StringValueLength>
+</JSONThreatProtection>

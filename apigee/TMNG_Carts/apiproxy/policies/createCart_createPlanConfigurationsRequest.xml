@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="createCart_createPlanConfigurationsRequest">
+    <ResourceURL>jsc://createCart_createPlanConfigurationsRequest.js</ResourceURL>
+</Javascript>

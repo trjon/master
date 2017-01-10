@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="deleteLine_AssignCreateRequest">
+    <AssignVariable>
+        <Name>ep.request.creditLevel</Name>
+        <Value>GOOD</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>ep.request.content</Name>
+        <Value/>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>ep.request.verb</Name>
+        <Value>DELETE</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>ep.request.path</Name>
+        <Ref>api.cortexTarget.path</Ref>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="true" transport="http" type="request">api.cortexRequest</AssignTo>
+</AssignMessage>

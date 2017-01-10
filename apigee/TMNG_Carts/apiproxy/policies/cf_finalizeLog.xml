@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="true" enabled="true" timeLimit="200" name="cf_finalizeLog">
+    <DisplayName>cf_finalizeLog</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://cf_finalizeLog.js</ResourceURL>
+</Javascript>

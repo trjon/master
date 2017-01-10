@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="mock_getConfiguredPlans">
+    <FaultRules/>
+    <Properties/>
+    <Set>
+        <Headers>
+            <Header name="Access-Control-Allow-Origin">*</Header>
+            <Header name="Access-Control-Allow-Headers">DNT,origin, access-control-allow-origin, X-Requested-With, Content-Type, Accept, Authorization, JSNLog-RequestId, senderId, sessionId, scope,  token,  referer,x-ep-user-scopes,x-ep-credit-level,x-ep-user-traits,x-ep-user-roles,x-forwarded-base,x-ep-user-id,cache-control</Header>
+            <Header name="Access-Control-Max-Age">3628800</Header>
+            <Header name="Access-Control-Allow-Methods">GET, PUT, POST, DELETE, OPTIONS</Header>
+        </Headers>
+        <StatusCode>200</StatusCode>
+        <ReasonPhrase>OK</ReasonPhrase>
+        <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+            {"status":{"code":100,"message":"Success"},"plans":{"lines":[{"lineNumber":1,"lineId":"Line1","lineType":"VOICE","planOptions":[{"planOptionSelectorId":"PLAN1","label":"DATA_2GB","socs":["NATTU2GB"],"monthlyPrice":{"price":"50.00","displayValue":"$50.00"},"tags":["RECOMMENDED"]},{"planOptionSelectorId":"PLAN2","label":"DATA_6GB","socs":["NATTU6GB"],"monthlyPrice":{"price":"65.00","displayValue":"$65.00"},"tags":["RECOMMENDED"]},{"planOptionSelectorId":"PLAN3","label":"DATA_10GB","socs":["NATTU10GB"],"monthlyPrice":{"price":"80.00","displayValue":"$80.00"},"tags":[]},{"planOptionSelectorId":"PLAN4","label":"DATA_UNLIMITED","socs":["NATTUUNL"],"monthlyPrice":{"price":"95.00","displayValue":"$95.00"},"tags":["HERO"]},{"planOptionSelectorId":"PLAN5","label":"DATA_SMARTFIT","socs":["NATTUSF"],"monthlyPrice":{"price":"65.00","displayValue":"$65.00"},"tags":["RECOMMENDED"]}],"selectedPlan":"PLAN2","monthlyPrice":{"price":"279.99","displayValue":"$279.99"}},{"lineNumber":2,"lineId":"Line2","lineType":"VOICE","planOptions":[{"planOptionSelectorId":"PLAN1","label":"DATA_2GB","socs":["NATTU2GB"],"monthlyPrice":{"price":"50.00","displayValue":"$50.00"},"tags":["RECOMMENDED"]},{"planOptionSelectorId":"PLAN2","label":"DATA_6GB","socs":["NATTU6GB"],"monthlyPrice":{"price":"65.00","displayValue":"$65.00"},"tags":["RECOMMENDED"]},{"planOptionSelectorId":"PLAN3","label":"DATA_10GB","socs":["NATTU10GB"],"monthlyPrice":{"price":"80.00","displayValue":"$80.00"},"tags":[]},{"planOptionSelectorId":"PLAN4","label":"DATA_UNLIMITED","socs":["NATTUUNL"],"monthlyPrice":{"price":"95.00","displayValue":"$95.00"},"tags":["HERO"]},{"planOptionSelectorId":"PLAN5","label":"DATA_SMARTFIT","socs":["NATTUSF"],"monthlyPrice":{"price":"65.00","displayValue":"$65.00"},"tags":["RECOMMENDED"]}],"selectedPlan":"PLAN2","monthlyPrice":{"price":"279.99","displayValue":"$279.99"}}],"messages":[{"type":"ERROR/INFO/WARN","details":[{"code":"","message":""}]}]}}
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

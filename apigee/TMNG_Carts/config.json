@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "dev01",
+            "policies": [],
+            "proxies": [],
+            "targets": []
+        },
+        {
+            "name": "dev04",
+            "policies": [],
+            "proxies": [],
+            "targets": []
+        },
+        {
+            "name": "GenericBuild",
+            "policies": [],
+            "proxies": [],
+            "targets": []
+        }
+    ]
+}

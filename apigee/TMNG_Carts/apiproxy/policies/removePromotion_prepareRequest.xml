@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="removePromotion_prepareRequest">
+    <Properties>
+        <Property name="pattern">/_cartID/promotions/_couponCode</Property>
+        <Property name="path">/cortex/coupons/orders/raptor/_orderID/_base32EncodedCouponCode</Property>
+    </Properties>
+    <IncludeURL>jsc://utils.js</IncludeURL>
+    <IncludeURL>jsc://Base32.js</IncludeURL>
+    <ResourceURL>jsc://prepaReremovePromoCode.js</ResourceURL>
+</Javascript>

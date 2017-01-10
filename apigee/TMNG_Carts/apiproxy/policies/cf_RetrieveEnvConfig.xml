@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="cf_RetrieveEnvConfig" mapIdentifier="TMNG_EnvConfig">
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>-1</ExpiryTimeInSecs>
+    <InitialEntries>
+        <Entry>
+            <Key>
+                <Parameter>logType</Parameter>
+            </Key>
+            <Value>DEBUG</Value>
+        </Entry>
+        <Entry>
+            <Key>
+                <Parameter>splunkEnv</Parameter>
+            </Key>
+            <Value>non-prod</Value>
+        </Entry>
+        <Entry>
+            <Key>
+                <Parameter>productdetailsTTL</Parameter>
+            </Key>
+            <Value>3600</Value>
+        </Entry>
+        <Entry>
+            <Key>
+                <Parameter>productStockDetailsTTL</Parameter>
+            </Key>
+            <Value>300</Value>
+        </Entry>
+        <Entry>
+            <Key>
+                <Parameter>system</Parameter>
+            </Key>
+            <Value>TMNG</Value>
+        </Entry>
+        <Entry>
+            <Key>
+                <Parameter>component</Parameter>
+            </Key>
+            <Value>TMNG_API_FACADE</Value>
+        </Entry>
+        <Entry>
+            <Key>
+                <Parameter>partnerId</Parameter>
+            </Key>
+            <Value>TMNG_UI</Value>
+        </Entry>
+    </InitialEntries>
+    <Get assignTo="api.envcfg.logType">
+        <Key>
+            <Parameter>logType</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="api.envcfg.splunkEnv">
+        <Key>
+            <Parameter>splunkEnv</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="api.envcfg.productdetailsTTL">
+        <Key>
+            <Parameter>productdetailsTTL</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="api.envcfg.productStockDetailsTTL">
+        <Key>
+            <Parameter>productStockDetailsTTL</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="api.envcfg.system">
+        <Key>
+            <Parameter>system</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="api.envcfg.component">
+        <Key>
+            <Parameter>component</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="api.envcfg.partnerId">
+        <Key>
+            <Parameter>partnerId</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Cortex_GetCartByID_AssignTargetRequest">
+    <Set>
+        <Headers>
+            <Header name="Content-Type">application/json</Header>
+            <Header name="x-ep-credit-level">{api.request.creditLevel}</Header>
+        </Headers>
+        <QueryParams>
+            <QueryParam name="zoom">{api.ep.getCart.Zoom}</QueryParam>
+        </QueryParams>
+        <Verb>GET</Verb>
+    </Set>
+    <Copy>
+        <Headers>
+            <Header name="Authorization"/>
+        </Headers>
+    </Copy>
+    <AssignVariable>
+        <Name>target.copy.pathsuffix</Name>
+        <Value>false</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="true" transport="http" type="request"/>
+</AssignMessage>

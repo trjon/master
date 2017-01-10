@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="getCartPricePreview_cartPriceForNoneCredit">
+    <Request variable="cortexRequest">
+        <Set>
+            <Headers>
+                <Header name="Content-Type">application/json</Header>
+                <Header name="x-ep-credit-level">NONE</Header>
+                <Header name="Authorization">{request.header.Authorization}</Header>
+            </Headers>
+            <QueryParams>
+                <QueryParam name="zoom">monthlyprice,paynowprice,refundable-deposit,total</QueryParam>
+            </QueryParams>
+            <Path>{api.cortexTarget.path}</Path>
+            <Verb>GET</Verb>
+            <Payload contentType="application/json"/>
+        </Set>
+    </Request>
+    <HTTPTargetConnection>
+        <Properties>
+            <Property name="target.copy.pathsuffix">false</Property>
+            <Property name="target.copy.queryparams">false</Property>
+            <Property name="keepalive.timeout.millis">360000</Property>
+            <Property name="connect.timeout.millis">3600</Property>
+        </Properties>
+        <LoadBalancer>
+            <Server name="TMNG_ElasticPath_CortexTarget">
+                <IsEnabled>true</IsEnabled>
+            </Server>
+        </LoadBalancer>
+    </HTTPTargetConnection>
+    <Response>ep.noneCreditResponse</Response>
+</ServiceCallout>

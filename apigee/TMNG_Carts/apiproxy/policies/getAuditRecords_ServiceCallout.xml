@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="getAuditRecords_ServiceCallout">
+    <Request variable="cortexRequest">
+        <Set>
+            <Headers>
+                <Header name="Content-Type">application/json</Header>
+                <Header name="Authorization">{request.header.Authorization}</Header>
+            </Headers>
+            <Path>{ep.request.path}</Path>
+            <Verb>GET</Verb>
+        </Set>
+    </Request>
+    <HTTPTargetConnection>
+        <Properties>
+            <Property name="target.copy.pathsuffix">false</Property>
+            <Property name="target.copy.queryparams">false</Property>
+            <Property name="keepalive.timeout.millis">360000</Property>
+            <Property name="connect.timeout.millis">3600</Property>
+        </Properties>
+        <LoadBalancer>
+            <Server name="TMNG_ElasticPath_CortexTarget">
+                <IsEnabled>true</IsEnabled>
+            </Server>
+        </LoadBalancer>
+    </HTTPTargetConnection>
+    <Response>ep.response</Response>
+</ServiceCallout>

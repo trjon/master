@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="cf_TransformEPtoServiceResponse">
+    <DisplayName>cf_TransformEPtoServiceResponse</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://transformEPtoServicesResponse.js</ResourceURL>
+</Javascript>

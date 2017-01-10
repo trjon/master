@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="CortexTargetEndPoint">
+    <Description/>
+    <FaultRules>
+        <FaultRule name="targetFaultHandling">
+            <Step>
+                <Name>cf_AssignErrorRespMessage</Name>
+            </Step>
+            <Step>
+                <Name>cf_AssignAPIErrorToRespMessage</Name>
+            </Step>
+            <Step>
+                <Name>cf_addCORS</Name>
+            </Step>
+        </FaultRule>
+    </FaultRules>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <Name>cf_addCORS</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <Flows>
+        <Flow name="getDefaultCart">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>Cortex_GetDefaultCart_AssignTargetRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>Cortex_GetDefaultCart_PrepareRedirectCall</Name>
+                </Step>
+                <Step>
+                    <Name>cf_cortexTargetCalloutWithZoom</Name>
+                </Step>
+                <Step>
+                    <Name>cf_TransformEPtoCartResponse</Name>
+                </Step>
+            </Response>
+            <Condition>api.target.route.operation = "getDefaultCart"</Condition>
+        </Flow>
+        <Flow name="getCartByID">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>Cortex_GetCartByID_JSTargetRequest</Name>
+                </Step>
+                <Step>
+                    <Name>Cortex_GetCartByID_AssignTargetRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>cf_TransformEPtoCartResponse</Name>
+                </Step>
+            </Response>
+            <Condition>api.target.route.operation = "getCartByID"</Condition>
+        </Flow>
+        <Flow name="getCartCheckoutData">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>Cortex_GetCartByID_JSTargetRequest</Name>
+                </Step>
+                <Step>
+                    <Name>Cortex_GetCartByID_AssignTargetRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>cf_TransformEPtoCheckoutResponse</Name>
+                </Step>
+            </Response>
+            <Condition>api.target.route.operation = "getCartCheckoutData"</Condition>
+        </Flow>
+        <Flow name="getServices">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>getServices_CreateTargetRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>cf_TransformEPtoServiceResponse</Name>
+                </Step>
+            </Response>
+            <Condition>api.target.route.operation = "getServices"</Condition>
+        </Flow>
+        <Flow name="bundleServices">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>bundleServices_CreateTargetRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>cf_TransformEPtoServiceResponse</Name>
+                </Step>
+            </Response>
+            <Condition>api.target.route.operation = "bundleServices"</Condition>
+        </Flow>
+        <Flow name="getConfiguredPlans">
+            <Request>
+                <Step>
+                    <Name>getConfiguredPlans_CreateTargetRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>cf_TransformEPtoPlanResponse</Name>
+                </Step>
+            </Response>
+            <Condition>api.target.route.operation = "getConfiguredPlans"</Condition>
+        </Flow>
+        <Flow name="createConfiguredPlans">
+            <Request>
+                <Step>
+                    <Name>createConfiguredPlans_CreateTargetRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>cf_TransformEPtoPlanResponse</Name>
+                </Step>
+            </Response>
+            <Condition>api.target.route.operation = "createConfiguredPlans"</Condition>
+        </Flow>
+    </Flows>
+    <HTTPTargetConnection>
+        <LoadBalancer>
+            <Server name="TMNG_ElasticPath_CortexTarget">
+                <IsEnabled>true</IsEnabled>
+            </Server>
+        </LoadBalancer>
+        <Path>{api.cortexTarget.path}</Path>
+        <Properties>
+            <Property name="target.copy.pathsuffix">false</Property>
+            <Property name="target.copy.queryparams">false</Property>
+            <Property name="keepalive.timeout.millis">360000</Property>
+            <Property name="connect.timeout.millis">3600</Property>
+        </Properties>
+    </HTTPTargetConnection>
+</TargetEndpoint>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="bundleServices_CreateTargetRequest">
+    <Set>
+        <Headers>
+            <Header name="Content-Type">application/json</Header>
+            <Header name="x-ep-credit-level">{api.request.creditLevel}</Header>
+            <Header name="x-ep-zipcode">{request.queryparam.zipCode}</Header>
+        </Headers>
+        <QueryParams>
+            <QueryParam name="zoom">{api.ep.getServices.Zoom}</QueryParam>
+            <QueryParam name="followlocation"/>
+        </QueryParams>
+        <Verb>POST</Verb>
+        <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+               {"constituent-id":"@ep.request.service.sku#"}
+        </Payload>
+    </Set>
+    <Copy>
+        <Headers>
+            <Header name="Authorization"/>
+        </Headers>
+    </Copy>
+    <AssignVariable>
+        <Name>target.copy.pathsuffix</Name>
+        <Value>false</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="true" transport="https" type="request"/>
+</AssignMessage>

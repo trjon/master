@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf_addCORS">
+    <FaultRules/>
+    <Properties/>
+    <Set>
+        <Headers>
+            <Header name="Access-Control-Allow-Origin">*</Header>
+            <Header name="Access-Control-Allow-Headers">clientuuid,DNT,origin, access-control-allow-origin, X-Requested-With, Content-Type, Accept, Authorization, JSNLog-RequestId, senderId, sessionId, scope,  token,  referer,x-ep-user-scopes,x-ep-credit-level,x-ep-user-traits,x-ep-user-roles,x-forwarded-base,x-ep-user-id,cache-control</Header>
+            <Header name="Access-Control-Max-Age">3628800</Header>
+            <Header name="Access-Control-Allow-Methods">GET, PUT, POST, DELETE, OPTIONS</Header>
+        </Headers>
+        <StatusCode>200</StatusCode>
+        <ReasonPhrase>OK</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

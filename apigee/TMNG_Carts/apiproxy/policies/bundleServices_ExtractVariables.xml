@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="bundleServices_ExtractVariables">
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <Variable name="ep.request.service.sku">
+            <JSONPath>$.sku</JSONPath>
+        </Variable>
+        <Variable name="ep.request.service.id">
+            <JSONPath>$.id</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">request</Source>
+</ExtractVariables>

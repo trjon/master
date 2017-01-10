@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="getTargetFlowName_AssignVariable">
+    <DisplayName>getTargetFlowName_AssignVariable</DisplayName>
+    <AssignVariable>
+        <Name>api.targetFlowName</Name>
+        <Ref>current.flow.name</Ref>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

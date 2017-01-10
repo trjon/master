@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="createCart_AssignCreateRequest">
+    <AssignVariable>
+        <Name>ep.request.content</Name>
+        <Value/>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>ep.request.verb</Name>
+        <Value>GET</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>ep.request.path</Name>
+        <Value>/cortex/carts/raptor/default</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="true" transport="http" type="request">api.cortexRequest</AssignTo>
+</AssignMessage>

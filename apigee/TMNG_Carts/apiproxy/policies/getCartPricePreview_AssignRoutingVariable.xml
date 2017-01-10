@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="getCartPricePreview_AssignRoutingVariable">
+    <AssignVariable>
+        <Name>api.target.route.system</Name>
+        <Value>Cortex</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>api.target.route.operation</Name>
+        <Value>getCartByID</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>api.ep.getCart.Zoom</Name>
+        <Value>monthlyprice,paynowprice,refundable-deposit,total</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>api.request.creditLevel</Name>
+        <Ref>BUILDING</Ref>
+        <Value/>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="getServices_AssignRoutingVariable">
+    <AssignVariable>
+        <Name>api.target.route.system</Name>
+        <Value>Cortex</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>api.target.route.operation</Name>
+        <Value>getServices</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

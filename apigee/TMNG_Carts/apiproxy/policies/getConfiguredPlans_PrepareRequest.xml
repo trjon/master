@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="getConfiguredPlans_PrepareRequest">
+    <Properties>
+        <Property name="pattern">/_cartID/plan-configurations</Property>
+        <Property name="path">/cortex/planconfigurations/raptor/_cartID</Property>
+    </Properties>
+    <IncludeURL>jsc://utils.js</IncludeURL>
+    <ResourceURL>jsc://extrectIDs.js</ResourceURL>
+</Javascript>
